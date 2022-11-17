@@ -17,6 +17,12 @@
       "style": {}
     }
   ],
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": []
+    }
+  ],
   "globalStyle": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "优购",
