@@ -88,6 +88,9 @@ export default {
   padding: 16rpx;
   background-color: #c00000;
 }
+.uni-tag {
+  margin-right: 5px;
+}
 
 .search-content {
   position: sticky;
@@ -111,6 +114,9 @@ export default {
     }
   }
 
+}
+.history-list {
+  padding: 0 5px;
 }
 .history-title {
   padding: 13px 3px;

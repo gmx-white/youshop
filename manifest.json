@@ -52,6 +52,8 @@
         /* 小程序特有相关 */
         "appid" : "wx4b678c4a716c9f0f",
         "setting" : {
+			"ignoreDevUnusedFiles" : false,
+			"ignoreUploadUnusedFiles" : false,
             "urlCheck" : false,
             "es6" : true
         },
