@@ -1,5 +1,7 @@
 <template>
   <view>
+    <!-- 搜索 -->
+    <search-input @click="gotoSearch"></search-input>
     <!-- 轮播图 -->
     <swiper autoplay indicator-dots>
       <swiper-item v-for="(item, i) in swiperList" :key="i">
@@ -56,6 +58,13 @@ export default {
     this.getfloorList()
   },
   methods: {
+    // 搜索
+    // 搜索
+    gotoSearch() {
+      uni.navigateTo({
+        url: '/subpkg/search/search'
+      })
+    },
     // 请求轮播图列表
     async getSwiperList() {
       try {

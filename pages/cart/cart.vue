@@ -1,5 +1,5 @@
 <template>
-
+<search-input></search-input>
 </template>
 
 <script>
