@@ -20,7 +20,9 @@
   "subPackages": [
     {
       "root": "subpkg",
-      "pages": []
+      "pages": [
+        
+      ]
     }
   ],
   "globalStyle": {
