@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import {request} from './utils/request'
+import * as filters from './utils/filters'
 
 // 网络请求
 request.baseUrl = 'https://api-ugo-web.itheima.net'
@@ -15,6 +16,10 @@ request.afterRequest = function (res) {
   uni.hideLoading()
 }
 uni.$http = request
+// 注册全局filters
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 // 全局消息提示
 uni.$showMsg = function (title='数据加载失败', duration=1500, icon='none'){
   uni.showToast({
