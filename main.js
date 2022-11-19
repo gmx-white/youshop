@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import {request} from './utils/request'
 import * as filters from './utils/filters'
+import store from './store/store.js'
 
 // 网络请求
 request.baseUrl = 'https://api-ugo-web.itheima.net'
@@ -29,12 +30,14 @@ uni.$showMsg = function (title='数据加载失败', duration=1500, icon='none')
   })
 }
 
+
 Vue.config.productionTip = false
 
 App.mpType = 'app'
 
 const app = new Vue({
-    ...App
+    ...App,
+    store
 })
 app.$mount()
 // #endif

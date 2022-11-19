@@ -1,20 +1,21 @@
 <template>
-<search-input></search-input>
+  <view></view>
 </template>
 
 <script>
+import badgeMix from '../../mixins/tabbar-badge'
 export default {
-  data () {
+  mixins: [badgeMix],
+  props: {},
+  data() {
     return {
-
-    }
+    };
   },
-  onLoad () {
-
-  }
-}
+  watch: {},
+  computed: {},
+  methods: {},
+  onLoad() {},
+};
 </script>
-
-<style lang="scss">
-
+<style lang="scss" scoped>
 </style>
