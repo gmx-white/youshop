@@ -13,5 +13,10 @@ export default {
   },
   computed: {
     ...mapGetters('m_cart', ['total'])
+  },
+  watch: {
+    total() {
+      this.setBadge()
+    }
   }
 }

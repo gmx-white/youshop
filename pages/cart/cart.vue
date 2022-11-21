@@ -1,5 +1,6 @@
 <template>
-  <view>
+  <view class="cart-container" v-if="cart.length > 0">
+    <my-address></my-address>
     <view class="cart-title">
       <!-- 左侧的图标 -->
       <uni-icons type="shop" size="18"></uni-icons>
@@ -19,6 +20,12 @@
       </uni-swipe-action>
 
     </view>
+    <!-- 结算 -->
+    <my-settle></my-settle>
+  </view>
+  <view class="empty-cart" v-else>
+    <image src="/static/cart_empty@2x.png" class="empty-pic"></image>
+    <text class="empty-text">购物车是空的哦~</text>
   </view>
 </template>
 
@@ -60,6 +67,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.cart-container {
+  padding-bottom: 50px;
+}
 .cart-title {
   height: 40px;
   display: flex;
@@ -70,6 +80,22 @@ export default {
 
   .cart-title-text {
     margin-left: 10px;
+  }
+}
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  .empty-pic {
+    width: 90px;
+    height: 90px;
+  }
+
+  .empty-text {
+    font-size: 12px;
+    color: gray;
+    margin-top: 15px;
   }
 }
 </style>
