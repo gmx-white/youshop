@@ -22,8 +22,6 @@ page {
 }
 
 
-
-/* #endif */
 .example-info {
 	font-size: 14px;
 	color: #333;

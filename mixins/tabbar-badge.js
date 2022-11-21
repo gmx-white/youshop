@@ -12,6 +12,6 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('m_cart', ['cart', 'total'])
+    ...mapGetters('m_cart', ['total'])
   }
 }

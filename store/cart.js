@@ -15,6 +15,27 @@ export default {
     },
     saveToStorage(state) {
       uni.setStorageSync('cart', JSON.stringify(state.cart))
+    },
+    updateGoodState(state, good) {
+      const findResult = state.cart.find(x => x.goods_id === good.goods_id)
+      if(findResult) {
+        findResult.goods_state = good.goods_state
+        this.commit('m_cart/saveToStorage')
+      }
+    },
+    updateGoodCount(state, good) {
+      const findResult = state.cart.find(x => x.goods_id === good.goods_id)
+      if(findResult) {
+        findResult.goods_count = good.goods_count
+        this.commit('m_cart/saveToStorage')
+      }
+    },
+    removeGood(state, id) {
+      const findIndex = state.cart.findIndex(x => x.goods_id === id)
+      if(findIndex !== -1) {
+        state.cart.splice(findIndex, 1)
+        this.commit('m_cart/saveToStorage')
+      }
     }
   },
   getters: {
