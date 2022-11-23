@@ -12,6 +12,12 @@ request.beforeRequest = function (options) {
   uni.showLoading({
     title: '数据加载中...'
   })
+
+  if(options.url.indexOf('/my') !== -1) {
+    options.headers = {
+      Authorization: store.state.m_user.token
+    }
+  }
 }
 request.afterRequest = function (res) {
   uni.hideLoading()
